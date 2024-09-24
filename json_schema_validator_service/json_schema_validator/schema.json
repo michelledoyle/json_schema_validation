@@ -181,7 +181,7 @@
              "maxLength": 255
            }
          },
-         "required": ["PatientBk", "PatientId", "FirstNm", "LastNm"]
+         "required": ["PatientBk"]
        },
        "Address": {
          "type": "array",
@@ -272,7 +272,7 @@
                "maxLength": 255
              }
            },
-           "required": ["ActiveInd", "AddressType", "AddressUse", "AddressLine1Descr", "CityNm", "StateProvinceCd", "PostalCd", "CountryNm"]
+           "required": ["AddressLine1Descr", "CityNm", "StateProvinceCd"]
          }
        },
        "Identification": {
@@ -340,7 +340,7 @@
                "maxLength": 255
              }
            },
-           "required": ["ActiveInd", "IdType", "IdSystem", "IdNum"]
+           "required": ["IdNum"]
          }
        },
        "Phone": {
@@ -404,7 +404,7 @@
                "maxLength": 255
              }
            },
-           "required": ["ActiveInd", "PhoneSystem", "PhoneUse", "PhoneNum"]
+           "required": ["PhoneNum"]
          }
        },
        "Email": {
@@ -469,7 +469,7 @@
                "maxLength": 255
              }
            },
-           "required": ["ActiveInd", "EmailUse", "EmailAddress"]
+           "required": ["EmailAddress"]
          }
        }
      },
