@@ -1,0 +1,480 @@
+{
+ "$schema": "http://json-schema.org/draft-07/schema#",
+ "title": "PatientData",
+ "type": "object",
+ "properties": {
+   "Patient": {
+     "type": "object",
+     "properties": {
+       "Info": {
+         "type": "object",
+         "properties": {
+           "PatientBk": {
+             "type": "string",
+             "maxLength": 128
+           },
+           "TenantNm": {
+             "type": "string",
+             "maxLength": 255
+           },
+           "SourceNm": {
+             "type": "string",
+             "maxLength": 255
+           },
+           "ActiveInd": {
+             "type": "string",
+             "enum": ["Y", "N"]
+           },
+           "PatientId": {
+             "type": "string",
+             "maxLength": 128
+           },
+           "BirthTs": {
+             "type": "string",
+             "format": "date"
+           },
+           "MaritalStatus": {
+             "type": "string",
+             "maxLength": 50
+           },
+           "MultipleBirthInd": {
+             "type": "string",
+             "enum": ["Y", "N"]
+           },
+           "BirthOrder": {
+             "type": "integer"
+           },
+           "AdministrativeSex": {
+             "type": "string",
+             "maxLength": 10
+           },
+           "BirthSex": {
+             "type": "string",
+             "maxLength": 10
+           },
+           "FirstNm": {
+             "type": "string",
+             "maxLength": 100
+           },
+           "MiddleNm": {
+             "type": "string",
+             "maxLength": 100
+           },
+           "LastNm": {
+             "type": "string",
+             "maxLength": 100
+           },
+           "SuffixNm": {
+             "type": "string",
+             "maxLength": 50
+           },
+           "AlternateFirstNm": {
+             "type": "string",
+             "maxLength": 100
+           },
+           "AlternateLastNm": {
+             "type": "string",
+             "maxLength": 100
+           },
+           "Race1Cd": {
+             "type": "string",
+             "maxLength": 50
+           },
+           "Race1Descr": {
+             "type": "string",
+             "maxLength": 255
+           },
+           "Race2Cd": {
+             "type": "string",
+             "maxLength": 50
+           },
+           "Race2Descr": {
+             "type": "string",
+             "maxLength": 255
+           },
+           "Race3Cd": {
+             "type": "string",
+             "maxLength": 50
+           },
+           "Race3Descr": {
+             "type": "string",
+             "maxLength": 255
+           },
+           "Ethnicity1Cd": {
+             "type": "string",
+             "maxLength": 50
+           },
+           "Ethnicity1Descr": {
+             "type": "string",
+             "maxLength": 255
+           },
+           "Ethnicity2Cd": {
+             "type": "string",
+             "maxLength": 50
+           },
+           "Ethnicity2Descr": {
+             "type": "string",
+             "maxLength": 255
+           },
+           "Ethnicity3Cd": {
+             "type": "string",
+             "maxLength": 50
+           },
+           "Ethnicity3Descr": {
+             "type": "string",
+             "maxLength": 255
+           },
+           "Language1Cd": {
+             "type": "string",
+             "maxLength": 50
+           },
+           "Language1Descr": {
+             "type": "string",
+             "maxLength": 255
+           },
+           "Language1PreferenceInd": {
+             "type": "string",
+             "enum": ["Y", "N"]
+           },
+           "Language2Cd": {
+             "type": "string",
+             "maxLength": 50
+           },
+           "Language2Descr": {
+             "type": "string",
+             "maxLength": 255
+           },
+           "Language2PreferenceInd": {
+             "type": "string",
+             "enum": ["Y", "N"]
+           },
+           "Language3Cd": {
+             "type": "string",
+             "maxLength": 50
+           },
+           "Language3Descr": {
+             "type": "string",
+             "maxLength": 255
+           },
+           "Language3PreferenceInd": {
+             "type": "string",
+             "enum": ["Y", "N"]
+           },
+           "InsertTs": {
+             "type": "string",
+             "format": "date-time"
+           },
+           "UpdateTs": {
+             "type": "string",
+             "format": "date-time"
+           },
+           "SourceTransactionNm": {
+             "type": "string",
+             "maxLength": 255
+           },
+           "SourceTransactionTs": {
+             "type": "string",
+             "format": "date-time"
+           },
+           "ServiceAccountId": {
+             "type": "string",
+             "maxLength": 255
+           }
+         },
+         "required": ["PatientBk", "PatientId", "FirstNm", "LastNm"]
+       },
+       "Address": {
+         "type": "array",
+         "items": {
+           "type": "object",
+           "properties": {
+             "PatientAddressBk": {
+               "type": "string",
+               "maxLength": 128
+             },
+             "ActiveInd": {
+               "type": "string",
+               "enum": ["Y", "N"]
+             },
+             "PatientBk": {
+               "type": "string",
+               "maxLength": 128
+             },
+             "AddressType": {
+               "type": "string",
+               "maxLength": 50
+             },
+             "AddressUse": {
+               "type": "string",
+               "maxLength": 50
+             },
+             "AddressSeq": {
+               "type": "number"
+             },
+             "AddressLine1Descr": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "AddressLine2Descr": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "AddressLine3Descr": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "AddressLine4Descr": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "CityNm": {
+               "type": "string",
+               "maxLength": 100
+             },
+             "StateProvinceCd": {
+               "type": "string",
+               "maxLength": 50
+             },
+             "PostalCd": {
+               "type": "string",
+               "maxLength": 20
+             },
+             "CountryNm": {
+               "type": "string",
+               "maxLength": 100
+             },
+             "InsertTs": {
+               "type": "string",
+               "format": "date-time"
+             },
+             "UpdateTs": {
+               "type": "string",
+               "format": "date-time"
+             },
+             "SourceTransactionNm": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "SourceTransactionTs": {
+               "type": "string",
+               "format": "date-time"
+             },
+             "ServiceAccountId": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "TenantNm": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "SourceNm": {
+               "type": "string",
+               "maxLength": 255
+             }
+           },
+           "required": ["ActiveInd", "AddressType", "AddressUse", "AddressLine1Descr", "CityNm", "StateProvinceCd", "PostalCd", "CountryNm"]
+         }
+       },
+       "Identification": {
+         "type": "array",
+         "items": {
+           "type": "object",
+           "properties": {
+             "PatientIdentificationBk": {
+               "type": "string",
+               "maxLength": 128
+             },
+             "ActiveInd": {
+               "type": "string",
+               "enum": ["Y", "N"]
+             },
+             "PatientBk": {
+               "type": "string",
+               "maxLength": 128
+             },
+             "IdType": {
+               "type": "string",
+               "maxLength": 50
+             },
+             "IdSystem": {
+               "type": "string",
+               "maxLength": 50
+             },
+             "IdSeq": {
+               "type": "number"
+             },
+             "IdNum": {
+               "type": "string",
+               "maxLength": 100
+             },
+             "StateCd": {
+               "type": "string",
+               "maxLength": 50
+             },
+             "InsertTs": {
+               "type": "string",
+               "format": "date-time"
+             },
+             "UpdateTs": {
+               "type": "string",
+               "format": "date-time"
+             },
+             "SourceTransactionNm": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "SourceTransactionTs": {
+               "type": "string",
+               "format": "date-time"
+             },
+             "ServiceAccountId": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "TenantNm": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "SourceNm": {
+               "type": "string",
+               "maxLength": 255
+             }
+           },
+           "required": ["ActiveInd", "IdType", "IdSystem", "IdNum"]
+         }
+       },
+       "Phone": {
+         "type": "array",
+         "items": {
+           "type": "object",
+           "properties": {
+             "PatientPhoneBk": {
+               "type": "string",
+               "maxLength": 128
+             },
+             "ActiveInd": {
+               "type": "string",
+               "enum": ["Y", "N"]
+             },
+             "PatientBk": {
+               "type": "string",
+               "maxLength": 128
+             },
+             "PhoneSystem": {
+               "type": "string",
+               "maxLength": 50
+             },
+             "PhoneUse": {
+               "type": "string",
+               "maxLength": 50
+             },
+             "PhoneSeq": {
+               "type": "number"
+             },
+             "PhoneNum": {
+               "type": "string",
+               "maxLength": 50
+             },
+             "InsertTs": {
+               "type": "string",
+               "format": "date-time"
+             },
+             "UpdateTs": {
+               "type": "string",
+               "format": "date-time"
+             },
+             "SourceTransactionNm": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "SourceTransactionTs": {
+               "type": "string",
+               "format": "date-time"
+             },
+             "ServiceAccountId": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "TenantNm": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "SourceNm": {
+               "type": "string",
+               "maxLength": 255
+             }
+           },
+           "required": ["ActiveInd", "PhoneSystem", "PhoneUse", "PhoneNum"]
+         }
+       },
+       "Email": {
+         "type": "array",
+         "items": {
+           "type": "object",
+           "properties": {
+             "PatientEmailBk": {
+               "type": "string",
+               "maxLength": 128
+             },
+             "ActiveInd": {
+               "type": "string",
+               "enum": ["Y", "N"]
+             },
+             "PatientBk": {
+               "type": "string",
+               "maxLength": 128
+             },
+             "EmailSystem": {
+               "type": "string",
+               "maxLength": 50
+             },
+             "EmailUse": {
+               "type": "string",
+               "maxLength": 50
+             },
+             "EmailSeq": {
+               "type": "number"
+             },
+             "EmailAddress": {
+               "type": "string",
+               "maxLength": 255,
+               "format": "email"
+             },
+             "InsertTs": {
+               "type": "string",
+               "format": "date-time"
+             },
+             "UpdateTs": {
+               "type": "string",
+               "format": "date-time"
+             },
+             "SourceTransactionNm": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "SourceTransactionTs": {
+               "type": "string",
+               "format": "date-time"
+             },
+             "ServiceAccountId": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "TenantNm": {
+               "type": "string",
+               "maxLength": 255
+             },
+             "SourceNm": {
+               "type": "string",
+               "maxLength": 255
+             }
+           },
+           "required": ["ActiveInd", "EmailUse", "EmailAddress"]
+         }
+       }
+     },
+     "required": ["Info"]
+   }
+ },
+ "required": ["Patient"]
+}
